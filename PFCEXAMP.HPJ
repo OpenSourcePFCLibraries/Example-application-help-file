@@ -1,0 +1,19 @@
+[OPTIONS]
+TITLE=PFC Version 10.0 Code Examples
+CONTENTS=Contents
+COPYRIGHT=Copyright © 1991-2003 Sybase, Inc. %date
+LCID=0x409 0x0 0x0
+COMPRESS=0
+
+[WINDOWS]
+main="PFC Examples",(22,32,585,660),28676,,(255,255,224)
+codewin="Examples",(534,702,464,246),29188,,(255,255,224),f3
+examples="Examples",(534,702,464,246),29188,,(255,255,224),f3
+secwin="Class Library",(534,702,464,246),29188,,(255,255,224),f3
+
+[CONFIG]
+BrowseButtons()
+
+[FILES]
+PFCEXAMP.RTF
+

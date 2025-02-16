@@ -1,0 +1,69 @@
+{\rtf1\ansi\deff3
+{\fonttbl{\f0\froman Symbol;}{\f1\fnil Helv;}{\f2\fnil Courier;}{\f3\fswiss Arial;}{\f4\fnil Helvetica;}{\f5\fnil Courier New;}{\f6\fnil ZapfDingbats;}{\f7\fnil Monotype Sorts;}{\f8\fnil Century Schoolbook;}{\f9\fnil Bookman Old Style;}{\f10\fswiss Arial Narrow;}}
+{\stylesheet{\fs24 \snext0 Normal;}
+}\pard\plain
+{\up +}{\footnote\pard\plain{\up +} BROWSE0001:0001}
+{\up $}{\footnote\pard\plain{\up $} PFC Examples Application}
+{\up #}{\footnote\pard\plain{\up #} Contents}
+\pard\keepn\sb235\sa55 {\up K}{\footnote\pard\plain{\up K} Contents}
+\b\fs24 PFC Examples Application
+\par \pard \plain\fs20 The PFC Examples Application demonstrates many features of the PowerBuildert Foundation Class Library.  It is a single document interface (SDI) application that showcases dozens of code examples, all utilizing PFC concrete and service class objects.  The PFC Examples Application can be used to:
+\par 
+\par \pard\li715\fi-355\tx715 \plain\f0\fs18 \'b7\tab \f3\fs20 Become familiar with the features of PFC
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 Demonstrate PFC coding techniques and feature implementations
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 Cut and paste code snippets into your own PFC applications.
+\par \pard\tx715 
+\par \pard\tx715 \uldb The Front End Launching Utility\plain\fs20 {\v FrontEnd}
+\par \pard\tx715 \uldb The PFC Examples Application Files\plain\fs20 {\v Files}\uldb 
+\par \pard\tx715 The PFC Examples Application Database\plain\fs20 {\v Database}
+\par \page
+{\up +}{\footnote\pard\plain{\up +} BROWSE0001:0002}
+{\up $}{\footnote\pard\plain{\up $} The Front End Launching Utility}
+{\up #}{\footnote\pard\plain{\up #} FrontEnd}
+\pard\keepn\sb235\sa55 {\up K}{\footnote\pard\plain{\up K} front end;launching utility;main window}
+\b\fs24 The Front End Launching Utility
+\par \pard \plain\fs20 PFC is a class library with built in application framework mechanisms.  The PFC Examples Application was created as such to demonstrate not only the concrete and service class objects that make up the class library, but also to show how to utilize these objects in an interactive application environment.
+\par 
+\par Although it is not technically an example, the front end launching utility is probably the best example in the application. It is loaded with PFC feature implementations including the following:
+\par \pard 
+\par \pard\li1075\fi-355\tx1075 \plain\f0\fs18 \'b7\tab \f3\fs20 uses the tree view service
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 uses the list view service
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 centralizes control of the Debug Service and SQL Spy Service settings via the menu or by clicking the status bar bitmaps
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 centralizes access to the Debug Log Window and SQL Spy Window via the menu or by clicking the status bar bitmaps
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 uses the Most Recently Used service to keep track of the most recently opened examples
+\par \plain\f0\fs18 \'b7\tab \f3\fs20 uses the split bar object in conjunction with the window resize service to balance the GUI presentation when the window is resized.
+\par \page
+{\up +}{\footnote\pard\plain{\up +} BROWSE0001:0003}
+{\up $}{\footnote\pard\plain{\up $} The PFC Examples Application Files}
+{\up #}{\footnote\pard\plain{\up #} Files}
+\pard\keepn\sb235\sa55 {\up K}{\footnote\pard\plain{\up K} files}
+\b\fs24 The PFC Examples Application Files
+\par \pard \plain\fs20 All files required for the PFC Examples Application are installed in the PFC Examples directory.
+\par 
+\par \b\ul PowerBuilder Libraries (PBL\f10 \'92\f3 s)\plain\fs20 
+\par \pard\li715\tx355 The following libraries must be in the application library list for the PFC Examples Application to run.  Be sure that the libraries are ordered with the \f10 \'93\f3 APP\'85\f10 \'94\f3  libraries in any order on top, the \f10 \'93\f3 EXM\'85\f10 \'94\f3  libraries in any order after the \f10 \'93\f3 APP\'85\f10 \'94\f3  libraries, and the \f10 \'93\f3 PFC\'85\f10 \'94\f3  libraries in any order at the bottom of the list.
+\par 
+\par APPEXAMP.PBL\tab - This contains the application object (pfcexamp)
+\par APPEXMDW.PBL
+\par APPEXMFE.PBL
+\par \pard\li715\tx355 EXMAPSRV.PBL
+\par EXMDWSRV.PBL
+\par EXMWNSRV.PBL
+\par EXMMAIN.PBL
+\par EXMUTIL.PBL
+\par PFCAPSRV.PBL
+\par PFCDWSRV.PBL
+\par PFCWNSRV.PBL
+\par PFCMAIN.PBL
+\par PFCUTIL.PBL
+\par \pard\tx355 
+\par \pard\tx355 \b\ul Other Files\plain\fs20 
+\par \pard\li715\tx355 The PFC Examples directory also includes the SQLSPY.LOG file, a text file for use by the SQL Spy service to log database activity.
+\par \page
+{\up +}{\footnote\pard\plain{\up +} BROWSE0001:0004}
+{\up $}{\footnote\pard\plain{\up $} PFC Examples Application Database}
+{\up #}{\footnote\pard\plain{\up #} Database}
+\pard\keepn\sb235\sa55 {\up K}{\footnote\pard\plain{\up K} Adaptive Server Anywhere;data;database;EASDEMO.DB}
+\b\fs24 PFC Examples Application Database
+\par \pard \plain\fs20 The database for the PFC Examples Application is the Adaptive Server Anywhere database file called the EAS demo database.  It is installed in the \i Shared\'5cPowerBuilder\plain\fs20  directory when the PowerBuilder setup program is run.  All examples, including the front end launching utility, use this database to demonstrate PFC features. 
+\par }
