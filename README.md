@@ -1,0 +1,1 @@
+The help file for the PFC Example application.  This repository contains the source code.  The help file itself in CHM or PDF format can be downloaded directly from the [Release link](https://github.com/OpenSourcePFCLibraries/Example-application-help-file/releases/tag/1.0).
