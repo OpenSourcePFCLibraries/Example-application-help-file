@@ -1,0 +1,14 @@
+body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1f1f1f; margin: 12px 18px; }
+h1 { font-size: 16pt; font-weight: 600; color: #1d4f91; margin: 0 0 10px; }
+h2 { font-size: 12pt; font-weight: 600; color: #1d4f91; margin: 18px 0 6px; }
+h3 { font-size: 11pt; font-weight: 600; color: #1d4f91; margin: 14px 0 6px; }
+p.crumb { font-size: 9pt; margin: 0 0 8px; }
+p.cover { font-size: 24pt; font-weight: 600; color: #1d4f91; margin: 40px 0 12px; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 9.5pt; }
+a { color: #1d5fbf; }
+table { border-collapse: collapse; margin: 6px 0 12px; }
+th, td { border: 1px solid #c8c8c8; padding: 3px 8px; text-align: left; vertical-align: top; }
+th { background: #eef2f8; font-weight: 600; }
+img { border: 1px solid #c8c8c8; max-width: 100%; }
+ul, ol { margin-top: 4px; }
+li { margin-bottom: 3px; }
