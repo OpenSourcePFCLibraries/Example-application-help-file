@@ -1,6 +1,6 @@
 # PFC Examples help
 
-The help file for the PFC Examples Application (the `pfc examples` project in [2025-Solution](https://github.com/OpenSourcePFCLibraries/2025-Solution) and [2025-Workspace](https://github.com/OpenSourcePFCLibraries/2025-Workspace)): `PFCEXAMP.chm`, which the application opens, and the same content as `PFCEXAMP.pdf`.  This repository contains the source; the help file itself, in CHM or PDF format, can be downloaded from the [latest release](https://github.com/OpenSourcePFCLibraries/Example-application-help-file/releases/latest).  Put `PFCEXAMP.chm` beside `pfcexamp.exe`.
+The help file for the PFC Examples Application (the `pfc examples` project in [2025-Solution](https://github.com/OpenSourcePFCLibraries/2025-Solution) and [2025-Workspace](https://github.com/OpenSourcePFCLibraries/2025-Workspace)): `PFCEXAMP.pdf`, which the application opens, and the same content as `PFCEXAMP.chm`, for the versions of the application that open a compiled help file.  This repository contains the source; the help file itself, in PDF or CHM format, can be downloaded from the [latest release](https://github.com/OpenSourcePFCLibraries/Example-application-help-file/releases/latest).  Put it beside `pfcexamp.exe`.
 
 Both are built from the sources in `src`:
 
@@ -8,6 +8,7 @@ Both are built from the sources in `src`:
 |---|---|
 | `src/topics.js` | The topics: the general ones, a topic for each category, and a topic for each example |
 | `src/build.js` | Generates the HTML Help project and the document for the PDF from the topics |
+| `src/pdfnames.js` | Gives the PDF a named destination for each topic |
 | `src/style.css` | The topics' style |
 | `src/images/` | A picture of each example's window, `<window>.png` |
 | `src/docpages.json` | The pages of the [docs](https://github.com/OpenSourcePFCLibraries/docs) repository that the PFC object names link to |
@@ -22,7 +23,7 @@ This needs Node.js, [HTML Help Workshop](https://learn.microsoft.com/previous-ve
 
 ## Help context numbers
 
-The Examples Application opens a topic by its help context number (`ShowHelp(..., Topic!, n)`):
+Each topic has a help context number.  In the PDF, the topic is the named destination `topic_<number>` (the application opens `PFCEXAMP.pdf#nameddest=topic_1010`, for example, with PFC's help service); in the CHM, it is the topic's help context (`ShowHelp(..., Topic!, n)`):
 
 | Topic | Number |
 |---|---|

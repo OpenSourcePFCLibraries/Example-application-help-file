@@ -164,11 +164,14 @@ ${idx.join('\n')}
 }
 
 // One document for the PDF: the topics as chapters, with links between them turned into
-// links to the chapters (Word makes the headings bookmarks and adds the table of contents)
+// links to the chapters (Word makes the headings bookmarks and adds the table of contents).
+// destinations.json gives each chapter title its named destination in the PDF, topic_<context
+// number>, which pdfnames.js adds (the application opens pfcexamp.pdf#nameddest=topic_<n>).
 function writeBook(all) {
   fs.rmSync(BOOK, { recursive: true, force: true });
   fs.mkdirSync(BOOK, { recursive: true });
   for (const p of t.examples.map(picture).filter(Boolean)) fs.copyFileSync(path.join(SRC, 'images', p), path.join(BOOK, p));
+  fs.writeFileSync(path.join(BOOK, 'destinations.json'), JSON.stringify(Object.fromEntries(all.map(([, title, , ctx]) => [title, 'topic_' + ctx])), null, 2));
   const chapters = all.map(([file, title, body], i) => {
     const html = body.replace(/href="([a-z0-9_]+)\.htm"/g, 'href="#$1"').replace(/<h2>/g, '<h3>').replace(/<\/h2>/g, '</h3>');
     return `<h${file.startsWith('ex_') ? 2 : 1} id="${file}"${i ? ' class="newpage"' : ''}>${esc(title)}</h${file.startsWith('ex_') ? 2 : 1}>\n${html}`;

@@ -6,8 +6,10 @@
     1. node src\build.js writes the HTML Help project to build\html and one HTML document
        with every topic to build\book.
     2. HTML Help Workshop's hhc.exe compiles build\html\pfcexamp.hhp to PFCEXAMP.chm.
-    3. Word opens build\book\pfcexamp.htm, adds the table of contents, and saves it as
-       PFCEXAMP.pdf, with the headings as bookmarks.
+    3. Word opens build\book\pfcexamp.htm, adds the table of contents, and saves it as a PDF,
+       with the headings as bookmarks.
+    4. node src\pdfnames.js gives that PDF a named destination for each topic, topic_<its help
+       context number> (from build\book\destinations.json), and saves it as PFCEXAMP.pdf.
 
     Needs Node.js, HTML Help Workshop (https://learn.microsoft.com/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads)
     and Microsoft Word.
@@ -36,7 +38,7 @@ if ($NoPdf) { return }
 
 # The PDF
 $book = Join-Path $root 'build\book\pfcexamp.htm'
-$pdf = Join-Path $root 'PFCEXAMP.pdf'
+$pdf = Join-Path $root 'build\book\pfcexamp.pdf'
 $word = New-Object -ComObject Word.Application
 try {
     $word.Visible = $false
@@ -62,4 +64,8 @@ finally {
     $word.Quit()
     [void][Runtime.InteropServices.Marshal]::ReleaseComObject($word)
 }
+
+# The named destinations
+node (Join-Path $root 'src\pdfnames.js') $pdf (Join-Path $root 'PFCEXAMP.pdf') (Join-Path $root 'build\book\destinations.json')
+if ($LASTEXITCODE -ne 0) { throw 'pdfnames.js failed' }
 Write-Host "PFCEXAMP.pdf"
